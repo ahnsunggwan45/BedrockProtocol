@@ -32,11 +32,13 @@ final class ProtocolInfo{
 	 */
 
 	/** Actual Minecraft: PE protocol version */
-	public const CURRENT_PROTOCOL = 1001;
+	// 1.26.40 (r/26_u4): Mojang docs state "Network Protocol Version 2169".
+	// VERIFY on first real-client connect — PMMP logs the client's protocol on mismatch.
+	public const CURRENT_PROTOCOL = 2169;
 	/** Display version shown in the server logs. This should match the version on the game's home screen. */
-	public const MINECRAFT_VERSION = 'v26.30';
+	public const MINECRAFT_VERSION = 'v26.40';
 	/** Version sent on the network for client side compatibility checks. This may differ from the display version. */
-	public const MINECRAFT_VERSION_NETWORK = '1.26.30';
+	public const MINECRAFT_VERSION_NETWORK = '1.26.40';
 
 	public const LOGIN_PACKET = 0x01;
 	public const PLAY_STATUS_PACKET = 0x02;
